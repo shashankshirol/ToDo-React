@@ -77,7 +77,7 @@ class App extends Component {
             handleEdit = {this.handleEdit}/>
           </div>
         </div>
-        <footer className="font-weight-light text-center mt-5">
+        <footer className="font-weight-light text-center">
         <div className="col-xs-12">
         <p>Made with <span className="h5">&hearts;</span> by Shashank Shirol</p>
         <p>Copyright &copy; 2020 Shashank Shirol. All Rights Reserved.</p>
