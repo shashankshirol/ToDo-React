@@ -11,4 +11,4 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### The app is deployed at netlify:
-[The ToDo App](https://todoapp-23.netlify.app/)
+[The To-Do App](https://todoapp-23.netlify.app/)
