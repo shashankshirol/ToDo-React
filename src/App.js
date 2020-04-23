@@ -22,17 +22,19 @@ class App extends Component {
 
     const newItem = {
       id:this.state.id,
-      title:this.state.item
+      title:this.state.item.trim()
     }
 
-    const updatedItems = [...this.state.items, newItem];
+    if(newItem.title !== ""){
+      const updatedItems = [...this.state.items, newItem];
 
-    this.setState({
-      items:updatedItems,
-      item:'',
-      id:uuid(),
-      editItem:false
-    })
+      this.setState({
+        items:updatedItems,
+        item:'',
+        id:uuid(),
+        editItem:false
+      })
+    }
 
   };
   clearList = () => {
@@ -61,7 +63,7 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-8 mt-4">
-            <h3 className="text-capitalize text-center"> todo input</h3>
+            <h3 className="display-4 text-capitalize text-center"> todo app</h3>
             <TodoInput 
               item={this.state.item}
               handleChange={this.handleChange}
@@ -75,6 +77,12 @@ class App extends Component {
             handleEdit = {this.handleEdit}/>
           </div>
         </div>
+        <footer className="font-weight-light text-center mt-5">
+        <div className="col-xs-12">
+        <p>Made with <span className="h5">&hearts;</span> by Shashank Shirol</p>
+        <p>Copyright &copy; 2020 Shashank Shirol. All Rights Reserved.</p>
+        </div>
+        </footer>
       </div>
     );
   }
